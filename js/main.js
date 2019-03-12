@@ -27,7 +27,7 @@ const updateTodoList = () => {
     let html = masterTodoList.reduce((accumulator, currentValue, index) => {
 
         let stringCurrent = `<li>${currentValue.text} <a onclick="remove(${index})" href="#">Remove</a>` +
-            ` - <a onclick="done(${index})" href="#">${(masterTodoList[index].isDone) ? 'Mark Undone' : 'Done'}</a></li>`;
+            ` - <a onclick="toggleDone(${index})" href="#">${(masterTodoList[index].isDone) ? 'Mark Undone' : 'Mark Done'}</a></li>`;
 
         if ($showNotDone.checked == true) {
             if (!currentValue.isDone)
@@ -49,7 +49,8 @@ function remove(index) {
     masterTodoList.splice(index, 1);
     updateTodoList();
 }
-function done(index) {
+
+function toggleDone(index) {
     masterTodoList[index].isDone = !masterTodoList[index].isDone;
     updateTodoList();
 }

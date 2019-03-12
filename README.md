@@ -6,12 +6,6 @@ View online at: [mt-todo.netlify.com](https://mt-todo.netlify.com/)
   
 One or two sentence summary of your project. 
 
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories.
-
-To create a GIF, use [LiceCap](http://www.cockos.com/licecap/), [RecordIt](http://www.recordit.co), or [Loom](http://www.useloom.com), and link the image here in the markdown.
-
 ## User Stories
 
 The following **required** functionalities are completed (this is a sample):
