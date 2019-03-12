@@ -1,8 +1,8 @@
-# CoderSchool FTW - * Name of Your Project Here *
+# CoderSchool FTW - MT.todo
 
-Created with love by: `Your Name Here`
+Created with love by: `bmthang94`
   
-View online at: `Your URL here`
+View online at: [mt-todo.netlify.com](https://mt-todo.netlify.com/)
   
 One or two sentence summary of your project. 
 
@@ -12,32 +12,21 @@ Here's a walkthrough of implemented user stories.
 
 To create a GIF, use [LiceCap](http://www.cockos.com/licecap/), [RecordIt](http://www.recordit.co), or [Loom](http://www.useloom.com), and link the image here in the markdown.
 
-```
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-```
-
 ## User Stories
 
 The following **required** functionalities are completed (this is a sample):
 
-* [x] Top navigation bar with dropdown buttons
-* [x] Banner with background image, white text, and a green button
-* [x] Color or text change when mouse hovers over
-* [x] At least 3 different body sections with different background images or colors
-* [x] 2 (or 3) card items per row in a body section
-* [x] Footer with social icons that link to the actual social pages
-
-The following **optional** features are implemented:
-
-* [x] Add favicon to the page
-* [ ] Animation on an element
-* [ ] Navigation, contact, sitemap, privacy policy, term of use, etc in footer
-* [ ] Bootstrap carousel for banner
-* [ ] Banner with background video
+* [x] User can input task into todo list
+* [x] Can remove the task
+* [x] Can check done or undone tasks
+* [x] can show only not done tasks
+* [x] User's tasks is stored in Local Storage
 
 The following **additional** features are implemented:
 
-* [x] List anything else that you can get done to improve the page!
+* [ ] Use checkbox instead of done toggle button
+* [ ] Add deadline and countdown time each task
+* [ ] Add style the webapp
 
 ## Time Spent and Lessons Learned
 

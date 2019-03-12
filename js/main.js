@@ -5,7 +5,6 @@ if (localStorage.getItem('MT.todo')) {
 } else {
     masterTodoList = [];
 }
-
 const $form = document.querySelector('#todo');
 const $todoInput = $form.querySelector('input[type="text"]');
 const $showNotDone = $form.querySelector('input[type="checkbox"]');
