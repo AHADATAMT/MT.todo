@@ -6,15 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>todo.MT</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        li p {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>MT.todo</h1>
-    <div id="todo_container">
-        <form id="todo">
-            <input type="text"><a class="btn">Add</a> <input type="checkbox" name="showTaskNotDone"> Show not done task only
-        </form>
-        <ul></ul>
+
+    <div id="todo_container" class="container">
+        <div class="row">
+            <div class="col offset-s3 s6">
+                <h3>MT.todo</h3>
+                <form id="todo">
+                    <p><input type="text"><a class="btn">Add</a></p>
+                    <p> <label>
+                        <input type="checkbox" class="filled-in">
+                        <span>Show not done tasks only </span>
+                    </label>
+                </p>
+                </form>
+                <ul></ul>
+            </div>
+        </div>
     </div>
 </body>
 <script src="js/main.js"></script>

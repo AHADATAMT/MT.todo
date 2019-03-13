@@ -1,10 +1,6 @@
-let masterTodoList = [];
 
-if (localStorage.getItem('MT.todo')) {
-    masterTodoList = JSON.parse(localStorage.getItem('MT.todo'));
-} else {
-    masterTodoList = [];
-}
+masterTodoList = localStorage.getItem('MT.todo') ? JSON.parse(localStorage.getItem('MT.todo')) : [];
+
 const $form = document.querySelector('#todo');
 const $todoInput = $form.querySelector('input[type="text"]');
 const $showNotDone = $form.querySelector('input[type="checkbox"]');
@@ -25,10 +21,8 @@ $todoBtn.addEventListener('click', addTodo);
 
 const updateTodoList = () => {
     let html = masterTodoList.reduce((accumulator, currentValue, index) => {
-
-        let stringCurrent = `<li>${currentValue.text} <a onclick="remove(${index})" href="#">Remove</a>` +
-            ` - <a onclick="toggleDone(${index})" href="#">${(masterTodoList[index].isDone) ? 'Mark Undone' : 'Mark Done'}</a></li>`;
-
+        let stringCurrent = `<li><p><label><input id="box${index}" type="checkbox" ${(masterTodoList[index].isDone) ? 'checked="checked"' : ''} class="filled-in"><span onclick="toggleDone(${index})"></span></label>${currentValue.text}</p>` +
+            `<span><a onclick="remove(${index})" href="#">Remove</a></span></li>`;
         if ($showNotDone.checked == true) {
             if (!currentValue.isDone)
                 return accumulator + stringCurrent;
@@ -40,11 +34,10 @@ const updateTodoList = () => {
 
     }, '');
     $ulTaskList.innerHTML = html;
-    localStorage.setItem('MT.todo', JSON.stringify(masterTodoList));
     console.log(masterTodoList);
+    localStorage.setItem('MT.todo', JSON.stringify(masterTodoList));
 }
 updateTodoList();
-
 function remove(index) {
     masterTodoList.splice(index, 1);
     updateTodoList();
@@ -55,6 +48,6 @@ function toggleDone(index) {
     updateTodoList();
 }
 
-$showNotDone.addEventListener('click', () => {
+$showNotDone.addEventListener('change', ()=>{
     updateTodoList();
-})
+});
